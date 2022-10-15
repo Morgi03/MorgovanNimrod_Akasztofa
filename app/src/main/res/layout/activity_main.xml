@@ -1,10 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:gravity="center_horizontal">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:id="@+id/layoutAbove">
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnMinusz"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="-"
+            android:background="@drawable/buttonbackround"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="A"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:id="@+id/abc"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnPlussz"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="+"
+            android:background="@drawable/buttonbackround"/>
+    </LinearLayout>
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layoutAbove"
+        android:id="@+id/tipp"
+        android:layout_centerInParent="true"
+        android:text="TIPPEL"/>
+    <ImageView
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/akasztofa00"
+        android:layout_below="@id/tipp"
+        android:id="@+id/Imgs"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:layout_below="@+id/Imgs"
+        android:textSize="25sp"
+        android:id="@+id/showWord"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
